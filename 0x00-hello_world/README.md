@@ -41,9 +41,29 @@ Example: if the C file is main.c, the output file should be main.o
 gcc -c $CFILE
 ```
 
-
+### Explanation
 #!/bin/bash is called a shebang. It's a special comment that specifies the interpreter to be used to run the script. In this case, it specifies that the script should be run using the Bash shell.
 
 gcc is a compiler for the C programming language. The -c option tells gcc to compile the C file into an object file, without linking it to create an executable. The $CFILE variable is used to specify the name of the C file to compile.
 
 Together, the script #!/bin/bash gcc -c $CFILE compiles a C file specified by the $CFILE variable into an object file, without linking it to create an executable.
+
+
+# Challenge 3
+Write a script that generates the assembly code of a C code and save it in an output file.
+
+The C file name will be saved in the variable $CFILE
+The output file should be named the same as the C file, but with the extension .s instead of .c.
+Example: if the C file is main.c, the output file should be main.s
+
+### Solution 
+```
+#!/bin/bash
+gcc -c $CFILE
+```
+
+### Explanation
+* The #!/bin/bash line tells the shell that the script is written in bash.
+* The gcc -c $CFILE line tells the gcc command to compile * * the C file into an object file. The C file name is saved in the variable $CFILE.
+* The gcc command will automatically create an output file with the same name as the C file, but with the extension .o.
+* The assembly code for the C code will be saved in the object file.
