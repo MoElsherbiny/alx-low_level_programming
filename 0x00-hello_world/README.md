@@ -28,5 +28,22 @@ The `gcc -E $CFILE -o c` command runs GCC with the `-E` option to preprocess the
 Overall, this script provides a simple way to preprocess C files using GCC and can be easily customized for different use cases.
 
 
+# Challenge 2
+Write a script that compiles a C file but does not link.
+
+The C file name will be saved in the variable $CFILE
+The output file should be named the same as the C file, but with the extension .o instead of .c.
+Example: if the C file is main.c, the output file should be main.o
+
+### Solution 
+```
+#!/bin/bash
+gcc -c $CFILE
+```
 
 
+#!/bin/bash is called a shebang. It's a special comment that specifies the interpreter to be used to run the script. In this case, it specifies that the script should be run using the Bash shell.
+
+gcc is a compiler for the C programming language. The -c option tells gcc to compile the C file into an object file, without linking it to create an executable. The $CFILE variable is used to specify the name of the C file to compile.
+
+Together, the script #!/bin/bash gcc -c $CFILE compiles a C file specified by the $CFILE variable into an object file, without linking it to create an executable.
