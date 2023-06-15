@@ -1,10 +1,8 @@
 #include <stdio.h>
-
 /**
-*Define the main function
-*Print the message "with proper grammar, but the outcome is a piece of art," to the console using the printf function
-*Return 0 to indicate successful termination of the program
-*/
+ *main - entry point
+ *Return: always 0 (success)
+ */
 int main(void)
 {
 printf("with proper grammar, but the outcome is a piece of art,\n");
