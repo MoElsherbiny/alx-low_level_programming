@@ -8,7 +8,7 @@
 5. Return 0 to indicate successful termination of the program
 6. End
 */
-int main()
+int main(void)
 {
 printf("with proper grammar, but the outcome is a piece of art,\n");
 	return 0;
