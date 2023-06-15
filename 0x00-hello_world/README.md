@@ -67,3 +67,23 @@ gcc -c $CFILE
 * The gcc -c $CFILE line tells the gcc command to compile * * the C file into an object file. The C file name is saved in the variable $CFILE.
 * The gcc command will automatically create an output file with the same name as the C file, but with the extension .o.
 * The assembly code for the C code will be saved in the object file.
+
+
+
+
+# Challenge 4
+- Write a script that compiles a C file and creates an executable named cisfun.
+
+- The C file name will be saved in the variable $CFILE
+
+### Solution 
+```
+#!/bin/bash
+gcc $CFILE -o cisfun
+
+```
+
+### Explanation
+* The -o option tells the gcc command to output the compiled code to the file specified by the argument. In this case, the argument is cisfun.
+*  The gcc command will compile the C file into machine code. Machine code is a series of instructions that can be executed by the computer's processor.
+* The executable file cisfun will be able to be run by the user by typing the command ./cisfun in the terminal.
