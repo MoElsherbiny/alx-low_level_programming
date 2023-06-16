@@ -1,39 +1,23 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ *main - Entry point
  *
- * Return: Always(Success)
+ *Return: Always (Success)
  */
-int main()
+int main(void)
 {
-int i, j, k;
+int n;
 
-for (i = 0; i < 10; i++)
+for (n = 48; n <= 57; n++)
 {
-putchar(i + '0');
-if (i != 9)
+putchar(n);
+if (n == 57)
 {
-putchar(', ');
+continue;
 }
-for (j = i + 1; j < 10; j++)
-{
-putchar(i + '0');
-putchar(j + '0');
-if (j != 9)
-{
- putchar(', ');
+putchar(',');
+putchar(' ');
 }
-for (k = j + 1; k < 10; k++)
-{
- putchar(j + '0');
- putchar(k + '0');
- if (k != 9)
- {
- putchar(', ');
- }
-}
-}
-}
-
-return 0;
+putchar('\n');
+return (0);
 }
