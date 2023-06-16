@@ -2,10 +2,12 @@
 /**
  * main - Entry point
  *
- * Return: Always(Success)
+ * Return: Always 0 (Success)
  */
-int main() {
+int main(void)
+{
 int i, j;
+
 for (i = 0; i < 100; i++) {
 for (j = i; j < 100; j++) {
 if (i == j) {
@@ -22,5 +24,6 @@ putchar(' ');
 }
 }
 }
-return 0;
+
+return (0);
 }
