@@ -3,19 +3,21 @@
 #define MAIN_H
 /**
  * print_alphabet - prints the lowercase alphabet followed by a newline
+ * Return: void
  */
 void print_alphabet(void)
 {
-char c;
-for (c = 'a'; c <= 'z'; c++)
-{
-putchar(c);
+    char c;
+    for (c = 'a'; c <= 'z'; c++)
+    {
+        putchar(c);
+    }
+    putchar('\n');
 }
-putchar('\n');
-}
+
 int main(void)
 {
-print_alphabet();
-return 0;
+    print_alphabet();
+    return 0;
 }
 #endif
