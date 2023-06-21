@@ -1,7 +1,8 @@
 #include <stdio.h>
+#ifndef MAIN_H
+#define MAIN_H
 /**
  * print_alphabet - prints the lowercase alphabet followed by a newline
- * Return: void
  */
 void print_alphabet(void)
 {
@@ -17,3 +18,4 @@ int main(void)
 print_alphabet();
 return 0;
 }
+#endif
