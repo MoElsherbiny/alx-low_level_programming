@@ -13,4 +13,5 @@ void print_rev(char *s);
 void rev_string(char *s);
 void swap_int(int *a, int *b);
 int _putchar(char c);
+int _strlen(char *s);
 #endif /*MAIN_H*/
