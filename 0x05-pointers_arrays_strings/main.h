@@ -15,5 +15,6 @@ void swap_int(int *a, int *b);
 void swap_char(char *a, char *b);
 int _putchar(char c);
 void puts2(char *str);
+void puts_half(char *str);
 int _strlen(char *s);
 #endif /*MAIN_H*/
