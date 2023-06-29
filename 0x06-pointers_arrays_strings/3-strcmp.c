@@ -1,11 +1,12 @@
 #include "main.h"
-
 /**
-*  Function _strcmp(s1, s2)
-*    Initialize index to 0
-*    While s1[index] and s2[index] are not null
-*        If s1[index] is not equal to s2[index]
-*            Return the difference between s1[index] and s2
+*  _strcmp - Function which compare two strings and
+*@s1: first string
+*@s2:second string
+*Return:
+*		returns zero if s1 == s2
+*		returns negative number if s1 < s2
+*		returns positive number if s1 > s2
 */
 
 int _strcmp(char *s1, char *s2)
