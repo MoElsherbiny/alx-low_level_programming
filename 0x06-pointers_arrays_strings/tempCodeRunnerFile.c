@@ -1,13 +1,4 @@
-#include "main.h"
-
-/**
- * cap_string - function that capitalizes first character
- * @str: string to capitalize
- * Return: returns the capitalized string
- */
-char *cap_string(char *str)
-{
-    int index = 0;
+int index = 0;
 
     while (str[index])
     {
@@ -23,5 +14,3 @@ char *cap_string(char *str)
         index++;
     }
     return (str);
-}
-
