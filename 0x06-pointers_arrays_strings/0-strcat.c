@@ -12,8 +12,7 @@
 * Increment dest_len
 * End For
 * Return dest
-* End Function
- */
+*/
 
 char *_strcat(char *dest, char *src)
 {
