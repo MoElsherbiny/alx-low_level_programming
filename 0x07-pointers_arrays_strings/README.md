@@ -100,3 +100,30 @@ The `_strpbrk` function takes two arguments: a pointer to the string to search (
 The function uses a `while` loop to iterate through the characters in the input string `s`. For each character, it uses a `for` loop to iterate through the characters in the reference string `accept`. If the character in `s` matches a character in `accept`, the function returns a pointer to the matching byte in `s`. If the character in `s` does not match any character in `accept`, the function continues to the next character in `s`. The `while` loop continues until the end of the input string is reached.
 
 Finally, the function returns `NULL` if no matching byte is found.
+
+
+## here's a pseudocode version of the code:5-strstr.c
+
+```
+function _strstr(haystack, needle):
+    i = 0
+    if needle[0] == '\0':
+        return haystack
+    while haystack[i] != '\0':
+        if haystack[i] == needle[0]:
+            j = 0
+            while needle[j] != '\0' and haystack[i+j] == needle[j]:
+                j = j + 1
+                if needle[j] == '\0':
+                    return haystack + i
+        i = i + 1
+    return NULL
+```
+
+The `_strstr` function takes two arguments: a pointer to the string to search (`haystack`), and a pointer to the substring to search for (`needle`).
+
+The function first checks if the `needle` string is empty. If it is, the function returns a pointer to the `haystack` string.
+
+The function then uses a `while` loop to iterate through the characters in the input string `haystack`. For each character, it checks if the character matches the first character in the reference substring `needle`. If there is a match, the function uses a nested `while` loop to compare the characters in both strings starting from the current position. If all the characters in the `needle` string match the corresponding characters in the `haystack` string, the function returns a pointer to the beginning of the located substring in `haystack`. If there is no match, the function continues to the next character in `haystack`. The `while` loop continues until the end of the input string is reached.
+
+Finally, the function returns `NULL` if the substring is not found.
