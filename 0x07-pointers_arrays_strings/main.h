@@ -3,10 +3,11 @@
 #include <stddef.h>
 #include <stdio.h>
 /**
-*void prototypes(void)
-*int prototypes(int)
-*char prototypes(char)
-*/
+ *void prototypes(void)
+ *int prototypes(int)
+ *char prototypes(char)
+ */
 char *_memset(char *s, char b, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n);
 
 #endif /* MAIN_H */
