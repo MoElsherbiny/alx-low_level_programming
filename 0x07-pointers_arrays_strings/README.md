@@ -127,3 +127,29 @@ The function first checks if the `needle` string is empty. If it is, the functio
 The function then uses a `while` loop to iterate through the characters in the input string `haystack`. For each character, it checks if the character matches the first character in the reference substring `needle`. If there is a match, the function uses a nested `while` loop to compare the characters in both strings starting from the current position. If all the characters in the `needle` string match the corresponding characters in the `haystack` string, the function returns a pointer to the beginning of the located substring in `haystack`. If there is no match, the function continues to the next character in `haystack`. The `while` loop continues until the end of the input string is reached.
 
 Finally, the function returns `NULL` if the substring is not found.
+
+
+ ## here's a pseudocode version of the  7-print_chessboard.c  
+
+ Sure, here's a pseudocode version of the `print_chessboard` function:
+
+1. Start a loop that iterates from i = 0 to the last row of the chessboard (where a[i][7] is not null).
+2. Within the loop, start another loop that iterates from j = 0 to 7 (the number of columns in a row).
+3. Within the inner loop, print the character at row i, column j of the chessboard using the _putchar function.
+4. After the inner loop has completed, print a newline character to move to the next line.
+5. Repeat the process until all rows of the chessboard have been printed.
+
+And here's what the pseudocode would look like in code form:
+
+```
+function print_chessboard(a)
+    for i = 0 to length(a)-1 do
+        for j = 0 to 7 do
+            _putchar(a[i][j])
+        end for
+        _putchar('\n')
+    end for
+end function
+``` 
+
+Note that the `_putchar` function is assumed to be a built-in function that prints a single character to the console.
