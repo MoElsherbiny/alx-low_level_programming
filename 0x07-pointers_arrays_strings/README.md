@@ -153,3 +153,27 @@ end function
 ``` 
 
 Note that the `_putchar` function is assumed to be a built-in function that prints a single character to the console.
+
+
+
+## Here's an explanation of the pseudocode: 8-print_diagsums.c
+
+```
+function print_diagsums(a, size):
+    sum1 = 0
+    sum2 = 0
+    for i in range(size):
+        sum1 += a[i]
+        a += size
+    a -= size
+    for i in range(size):
+        sum2 += a[i]
+        a -= size
+    print sum1, sum2
+```
+
+The `print_diagsums` function takes two arguments: a pointer to an integer array called `a`, and an integer called `size`. The function calculates the sum of the two diagonals of a square matrix of integers.
+
+The function starts by initializing two variables called `sum1` and `sum2` to zero. The first loop iterates over the elements of the first diagonal of the matrix. It does this by adding the value of each element to `sum1`, and then incrementing the pointer `a` by `size`. This moves the pointer to the next element in the diagonal. After the loop finishes, the pointer is moved back to the beginning of the first diagonal by subtracting `size` from it.
+
+The second loop iterates over the elements of the second diagonal of the matrix. It does this by adding the value of each element to `sum2`, and then decrementing the pointer `a` by `size`. This moves the pointer to the next element in the diagonal. After the loop finishes, the function prints out the values of `sum1` and `sum2`.
