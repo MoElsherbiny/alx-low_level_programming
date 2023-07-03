@@ -59,3 +59,25 @@ The function uses a `while` loop to iterate through the source and destination m
 
 Finally, the function returns a pointer to the destination memory area.
 
+## here's a pseudocode version of the code:  3-strspn.c
+
+```
+function _strspn(s, accept):
+    bytes = 0
+    i = 0
+    while s[i] != '\0':
+        for j = 0 to length(accept) - 1:
+            if accept[j] == s[i]:
+                bytes = bytes + 1
+                break
+            else if j == length(accept) - 1:
+                return bytes
+        i = i + 1
+    return bytes
+```
+
+The `_strspn` function takes two arguments: a pointer to the string to search (`s`), and a pointer to the characters to search for (`accept`).
+
+The function uses a `while` loop to iterate through the characters in the input string `s`. For each character, it uses a `for` loop to iterate through the characters in the reference string `accept`. If the character in `s` matches a character in `accept`, the count of matching bytes `bytes` is incremented and the `for` loop is broken. If the character in `s` does not match any character in `accept`, the function immediately returns the current count of matching bytes. The `while` loop continues until the end of the input string is reached.
+
+Finally, the function returns the total count of matching bytes.
