@@ -41,3 +41,21 @@ The function uses a `while` loop to iterate through the source and destination m
 
 Finally, the function returns a pointer to the destination memory area.
 
+## 2-strchr.c 
+##  here's a pseudocode version of the code:
+
+```
+function _memcpy(dest, src, n):
+    i = 0
+    while i < n:
+        dest[i] = src[i]
+        i = i + 1
+    return dest
+```
+
+The `_memcpy` function takes three arguments: a pointer to the destination memory area (`dest`), a pointer to the source memory area (`src`), and the number of bytes to copy (`n`).
+
+The function uses a `while` loop to iterate through the source and destination memory areas. In each iteration of the loop, it copies the current byte from the source memory area to the corresponding byte in the destination memory area, and then increments the index `i` to move to the next byte. This loop continues until `n` bytes have been copied.
+
+Finally, the function returns a pointer to the destination memory area.
+
