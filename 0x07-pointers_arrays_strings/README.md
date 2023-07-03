@@ -81,3 +81,22 @@ The `_strspn` function takes two arguments: a pointer to the string to search (`
 The function uses a `while` loop to iterate through the characters in the input string `s`. For each character, it uses a `for` loop to iterate through the characters in the reference string `accept`. If the character in `s` matches a character in `accept`, the count of matching bytes `bytes` is incremented and the `for` loop is broken. If the character in `s` does not match any character in `accept`, the function immediately returns the current count of matching bytes. The `while` loop continues until the end of the input string is reached.
 
 Finally, the function returns the total count of matching bytes.
+
+## here's a pseudocode version of the code:  4-strpbrk.c
+
+```
+function _strpbrk(s, accept):
+    i = 0
+    while s[i] != '\0':
+        for j = 0 to length(accept) - 1:
+            if accept[j] == s[i]:
+                return s + i
+        i = i + 1
+    return NULL
+```
+
+The `_strpbrk` function takes two arguments: a pointer to the string to search (`s`), and a pointer to the bytes to search for (`accept`).
+
+The function uses a `while` loop to iterate through the characters in the input string `s`. For each character, it uses a `for` loop to iterate through the characters in the reference string `accept`. If the character in `s` matches a character in `accept`, the function returns a pointer to the matching byte in `s`. If the character in `s` does not match any character in `accept`, the function continues to the next character in `s`. The `while` loop continues until the end of the input string is reached.
+
+Finally, the function returns `NULL` if no matching byte is found.
