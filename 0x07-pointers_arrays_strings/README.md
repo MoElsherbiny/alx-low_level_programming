@@ -177,3 +177,14 @@ The `print_diagsums` function takes two arguments: a pointer to an integer array
 The function starts by initializing two variables called `sum1` and `sum2` to zero. The first loop iterates over the elements of the first diagonal of the matrix. It does this by adding the value of each element to `sum1`, and then incrementing the pointer `a` by `size`. This moves the pointer to the next element in the diagonal. After the loop finishes, the pointer is moved back to the beginning of the first diagonal by subtracting `size` from it.
 
 The second loop iterates over the elements of the second diagonal of the matrix. It does this by adding the value of each element to `sum2`, and then decrementing the pointer `a` by `size`. This moves the pointer to the next element in the diagonal. After the loop finishes, the function prints out the values of `sum1` and `sum2`.
+
+
+## Here’s the pseudocode for the set_string function:
+```
+function set_string(s, to):
+    s = to
+```
+The set_string function takes two arguments: a pointer to a pointer to a character called s, and a pointer to a character called to. The function sets the value of the pointer s to the value of the pointer to.
+
+The function starts by assigning the value of to to s. This sets the value of the pointer that s points to (i.e., the original pointer passed into the function) to the value of to.
+
