@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * string_nconcat - concatenates two strings
  * @s1: first string
@@ -41,5 +40,5 @@ for (j = 0; j < n; j++, i++)
 concat[i] = s2[j];
 concat[i] = '\0'; /* add null terminator */
 
-    return (concat);
+return (concat);
 }
