@@ -1,18 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "3-calc.h"
 
 /**
- * main - performs simple operations
- * @argc: number of arguments
- * @argv: array of arguments
+ * main - performs simple operations (+, -, *, /, %)
+ *
+ * Usage: calc num1 operator num2
+ *
+ * @argc: number of arguments passed to the program
+ * @argv: array of arguments passed to the program
  *
  * Return: 0 on success,
- *  exit with error code otherwise
+ * or exit with status 98 if number of arguments is wrong,
+ * or exit with status 99 if operator is none of the above,
+ * or exit with status 100 if user tries to divide (/ or %) by 0.
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
+
 int num1, num2, result;
+
 int (*op_func)(int, int);
 
 if (argc != 4)
@@ -32,7 +37,7 @@ printf("Error\n");
 exit(99);
 }
 
-if ((argv[2][0] == '/' || argv[2][0] == '%') && num2 == 0)
+if ((op_func == op_div || op_func == op_mod) && num2 == 0)
 {
 printf("Error\n");
 exit(100);
