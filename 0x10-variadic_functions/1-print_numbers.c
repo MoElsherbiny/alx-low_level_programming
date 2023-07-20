@@ -10,20 +10,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 va_list args;
 unsigned int i;
+int num;
 
-va_start(args, n); /* initialize the argument list */
-
+va_start(args, n);
 for (i = 0; i < n; i++)
 {
-printf("%d", va_arg(args, int)); /* print the next argument as an int */
-
+num = va_arg(args, int);
+printf("%d", num);
 if (separator != NULL && i < n - 1)
-{
-printf("%s", separator); /* print the separator */
+printf("%s", separator);
 }
-}
-
-printf("\n"); /* print a new line */
-
-va_end(args); /* clean up the argument list */
+va_end(args);
+printf("\n");
 }
