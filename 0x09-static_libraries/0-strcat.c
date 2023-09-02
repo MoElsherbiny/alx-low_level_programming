@@ -9,7 +9,7 @@
 * substring, or NULL if the substring is not found.
 */
 
-char *_strstr(char *haystack, char *needle)
+char *_strcat(char *haystack, char *needle)
 {
 int i;
 if (*needle == 0)
